@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+  <groups>
+  <define name="first group">
+  <include name="smoke"></include>
+  <include name="reg"></include>
+  </define>
+   <define name="second group">
+  <include name="sanity"></include>
+  <include name="E2E"></include>
+  </define>
+  <run>
+  <include name="first group"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="org.comp.Groups"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
